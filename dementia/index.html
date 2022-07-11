@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div style="color:blue">
+        <form action="{{ url_for('predict')}}" method="post">
+            <h2>Dementia Prediction</h2>
+            <h3>Visited Before?</h3><br><input id="visit" name="Visit" required="required">
+            <h3>Had an MR Delay?</h3><input id="mr" name="MR" required="required">
+            <h3>Your Age</h3><br><input id="age" name="Age" required="required">
+            <h3>Gender</h3><br><select name="Gender" id="gender" required="required">
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                
+            </select>
+            <h3>Had CDR?</h3><br><select name="CDR" id="cdr" required="required">
+                <option value=0>zero</option>
+                <option value=0.5>half</option>
+                <option value=1>one</option>
+                <option value=2>two</option>
+            </select>
+            <h3>Had SES ?</h3><br><select name="SES" id="ses" required="required">
+                <option value=1>One</option>
+                <option value=2>Two</option>
+                <option value=3>Three</option>
+                <option value=4>Four</option>
+                <option value=5>Five</option>
+            </select>
+            <br><br><button id="sub" type="submit ">Calculate the Dementia Category</button>
+            <br>
+
+
+
+
+        </form>
+
+
+
+        <br><br><h3>{{ prediction_text }}<h3>
+    </div>
+
+
+
+
+    <style>
+        body {
+            background-color: lightslategray;
+            text-align: center;
+            padding: 0px;
+        }
+        
+        #ses {
+            font-size: 18px;
+            width: 100px;
+            height: 23px;
+            top: 23px;
+        }
+        
+        #box {
+            border-radius: 60px;
+            border-color: 45px;
+            border-style: solid;
+            font-family: cursive;
+            text-align: center;
+            background-color: rgb(168, 131, 61);
+            font-size: medium;
+            position: absolute;
+            width: 700px;
+            bottom: 9%;
+            height: 850px;
+            right: 30%;
+            padding: 0px;
+            margin: 0px;
+            font-size: 14px;
+        }
+        
+        #gender {
+            width: 83px;
+            height: 43px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 20px;
+        }
+        
+        #gender:hover {
+            background-color: coral;
+        }
+        
+        #ses {
+            width: 99px;
+            height: 43px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 18px;
+        }
+        
+        #ses:hover {
+            background-color: coral;
+        }
+        
+        #cdr {
+            width: 99px;
+            height: 43px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 18px;
+        }
+        
+        #cdr:hover {
+            background-color: coral;
+        }
+        
+        #sub {
+            width: 120px;
+            height: 43px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 18px;
+        }
+        
+        #sub:hover {
+            background-color: darkcyan;
+        }
+        
+        #first {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+        
+        #visit {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+        
+        #mr {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+        
+        #age {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+    </style>
+</body>
+
+</html>
