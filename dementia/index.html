@@ -2,10 +2,13 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Dementia Predictor</title>
 </head>
+
+<! --CSS -->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="" 
 
 <body>
 
@@ -15,24 +18,9 @@
             <h3>Visited Before?</h3><br><input id="visit" name="Visit" required="required">
             <h3>Had an MR Delay?</h3><input id="mr" name="MR" required="required">
             <h3>Your Age</h3><br><input id="age" name="Age" required="required">
-            <h3>Gender</h3><br><select name="Gender" id="gender" required="required">
-                <option value="Male">Male</option>
-                <option value="Female">Female</option>
-                
-            </select>
-            <h3>Had CDR?</h3><br><select name="CDR" id="cdr" required="required">
-                <option value=0>zero</option>
-                <option value=0.5>half</option>
-                <option value=1>one</option>
-                <option value=2>two</option>
-            </select>
-            <h3>Had SES ?</h3><br><select name="SES" id="ses" required="required">
-                <option value=1>One</option>
-                <option value=2>Two</option>
-                <option value=3>Three</option>
-                <option value=4>Four</option>
-                <option value=5>Five</option>
-            </select>
+            <h3>Gender</h3><br><input name="Gender" id="gender" required="required">
+            <h3>Had CDR?</h3><br><input name="CDR" id="cdr" required="required">
+            <h3>Had SES?</h3><br><input name="SES" id="ses" required="required">
             <br><br><button id="sub" type="submit ">Calculate the Dementia Category</button>
             <br>
 
@@ -43,7 +31,7 @@
 
 
 
-        <br><br><h3>{{ prediction_text }}<h3>
+        <br><br><h3>{{ pred }}<h3>
     </div>
 
 
